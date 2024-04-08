@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changement de couleur de fond</title>
+    <style>
+        body {
+            background-color: brown;
+            /* transition: background-color 0.5s ease; Ajoute une transition de couleur de fond en douceur */
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    function demanderChangementCouleur() {
+        var response = confirm("Est-ce que la couleur de fond actuelle vous plaît?");
+        if (response == true) {
+            alert("Aucun changement effectué");
+        } else {
+            changerCouleurFond();
+            alert("Changement effectué avec succès");
+        }
+    }
+
+    function changerCouleurFond() {
+        var nouvelleCouleur = prompt("Veuillez entrer une nouvelle couleur de fond (par exemple, blue, red, green, etc.)");
+        document.body.style.backgroundColor = nouvelleCouleur;
+    }
+</script>
+
+<!-- Un bouton pour déclencher la demande de changement de couleur -->
+<button onclick="demanderChangementCouleur()">Demander changement de couleur</button>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+    <script>
+// Créer un élément div
+
+var div = document.createElement("div");
+div.id = "identification";
+div.className = "form";
+
+// Créer un élément input pour le nom
+var inputNom = document.createElement("input");
+inputNom.type = "text";
+inputNom.name = "nom";
+inputNom.placeholder = "Entrez votre nom";
+
+// Créer un élément input pour le prénom
+var inputPrenom = document.createElement("input");
+inputPrenom.type = "text";
+inputPrenom.name = "prenom";
+inputPrenom.placeholder = "Entrez votre prénom";
+
+// Créer un élément input pour l'âge
+var inputAge = document.createElement("input");
+inputAge.type = "number";
+inputAge.name = "age";
+inputAge.placeholder = "Entrez votre âge";
+
+// Créer un élément button pour l'enregistrement
+var button = document.createElement("button");
+button.type = "button";
+button.innerHTML = "Enregistrer";
+button.onclick = function() {
+  // Récupérer les valeurs des input
+  var nom = inputNom.value;
+  var prenom = inputPrenom.value;
+  var age = inputAge.value;
+  // Afficher les valeurs dans la console
+  console.log("Nom : " + nom);
+  console.log("Prénom : " + prenom);
+  console.log("Âge : " + age);
+  // Envoyer les valeurs à un serveur (optionnel)
+  // ...
+};
+
+// Ajouter les éléments input et button comme enfants du div
+div.appendChild(inputNom);
+div.appendChild(inputPrenom);
+div.appendChild(inputAge);
+div.appendChild(button);
+
+// Ajouter le div comme enfant du body
+document.body.appendChild(div);
+
+</script>
+</body>
+</html>
